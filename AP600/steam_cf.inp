@@ -1,0 +1,8 @@
+AllowReplace
+
+CF_INPUT
+
+CF_ID	'steam inj'	EQUALS
+CF_SAI	0.0	0.027
+CF_ARG	1
+		1	EXEC-TIME	0.0	0.0

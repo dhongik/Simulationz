@@ -1,0 +1,93 @@
+AllowReplace
+
+CVH_INPUT
+
+!==========================================================
+CV_ID	'v_stm'	100	!steam dummy volume
+CV_THR	EQUIL	NOFOG	TIME-INDEP
+CV_PAS	COMMON	ONLYATM	SUPERHEATED
+CV_BND	FRAC	0.0	0.0	1.0
+CV_PTD	PVOL	172368.932	!25 psia
+CV_AAD	TATM	398.15		!125 centigrade
+CV_VAT	2
+		1	0.0			0.0
+		2	10.0		1.E+10	!assume inf source
+!==========================================================
+CV_ID	'v_ncg'	101	!ncg injection
+CV_THR	EQUIL	NOFOG	TIME-INDEP
+CV_PAS	COMMON	ONLYATM	SUPERHEATED
+CV_BND	FRAC	0.	0.	0.
+CV_PTD	PVOL	101325.
+CV_AAD	TATM	295.
+CV_NCG	2	PNCG	101325.		!assume 1:1 air to helium
+		1	N2	.8
+		2	O2	.2
+CV_VAT	2
+		1	0.	0.
+		2	10.	1.E+10	!assume infinite volume
+!==========================================================
+CV_ID	'drain'	102	!water drain
+CV_THR	EQUIL	NOFOG	TIME-INDEP
+CV_PAS	COMMON	ONLYATM	SUPERHEATED
+CV_BND	FRAC	0.	0.	0.
+CV_PTD	PVOL	101325.
+CV_AAD	TATM	295.
+CV_NCG	2 PNCG	101325.
+		1	N2	.8
+		2	O2	.2
+CV_VAT	2
+		1	0.0			0.0
+		2	10.0		1.E+10	!assuming inf volume
+!==========================================================
+CV_ID	'v_out'	104	!ncg and steam out volume
+CV_THR	EQUIL	NOFOG	TIME-INDEP
+CV_PAS	COMMON	ONLYATM	SUPERHEATED
+CV_BND	FRAC	0.	0.	0.
+CV_PTD	PVOL	101325.
+CV_AAD	TATM	295.
+CV_NCG	2	PNCG	101325.
+		1	N2	.8
+		2	O2	.2
+CV_VAT	2
+		1	12.4384	0.
+		2	22.4384	1.E+10
+!==========================================================
+CV_ID	'v1'	200	!bottom
+CV_THR	EQUIL	NOFOG	ACTIVE
+CV_PAS	COMMON	ONLYATM	SUPERHEATED
+CV_BND	FRAC	0.0	0.0	0.0
+CV_PTD	PVOL	101325.0	!assume ambient pressure
+CV_AAD	TATM	295.0		!assume ambient temperature
+CV_NCG	2	PNCG	101325.0
+		1	N2	0.8
+		2	O2	0.2
+CV_VAT	2
+		1	10.0		0.0
+		2	11.5284	.652198
+!==========================================================
+CV_ID	'v2'	300	!top without cooling pad (right)
+CV_THR	EQUIL	NOFOG	ACTIVE
+CV_PAS	COMMON	ONLYATM	SUPERHEATED
+CV_BND	FRAC	0.0	0.0	0.0
+CV_PTD	PVOL	101325.0	!assume ambient pressure
+CV_AAD	TATM	295.0		!assume ambient temperature
+CV_NCG	2	PNCG	101325.0
+		1	N2	0.8
+		2	O2	0.2
+CV_VAT	2
+		1	11.5284	0.0
+		2	12.4384	.13591
+!==========================================================
+CV_ID	'v3'	400	!top with cooling pad (left)
+CV_THR	EQUIL	NOFOG	ACTIVE
+CV_PAS	COMMON	ONLYATM	SUPERHEATED
+CV_BND	FRAC	0.0	0.0	0.0
+CV_PTD	PVOL	101325.0	!assume ambient pressure
+CV_AAD	TATM	295.0		!assume ambient temperature
+CV_NCG	2	PNCG	101325.0
+		1	N2	0.8
+		2	O2	0.2
+CV_VAT	2
+		1	11.5284	0.0
+		2	12.4384	.252405
+!==========================================================

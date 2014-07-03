@@ -1,0 +1,104 @@
+AllowReplace
+
+FL_INPUT
+
+!==========================================================
+FL_ID	'f_stm'	101
+FL_FT	'v_stm' 'v1'	10.0		10.0
+FL_GEO	0.00912073	3.04	1.0	!area from thesis, length assumed
+FL_JSW	11	NOBUBBLERISE	NOBUBBLERISE
+FL_USL	0.	0.	0.	0.
+FL_VEL	3.094144	0.
+FL_JLF	10.0	10.0
+FL_JLT	10.0	10.0	
+FL_SEG	1
+		1	.00912073	3.04	.0254
+FL_VTM	1
+		1	'f_stm'	TF	'TF_STM'	
+!==========================================================
+FL_ID	'f_ncg'	107			!ncg injection pipe
+FL_FT	'v_ncg'	'v1'	10.	10.
+FL_GEO	.00912073	.1	1.
+FL_JSW	11	NOBUBBLERISE	NOBUBBLERISE
+FL_USL	0.	0.	0.	0.
+FL_VEL	3.094144	0.
+FL_JLF	10.	10.
+FL_JLT	10.	10.
+FL_SEG	1
+		1	.00912073	.1	.0254
+FL_VTM	1
+		1	'f_ncg'	TF	'TF_NCG'	!USE CF
+!==========================================================
+FL_ID	'f_drain'	106	!specifics assumed to be the same as f_stm
+FL_FT	'v1'	'drain'	10.	10.
+FL_GEO	.00202683	0.1	1.0
+FL_JSW	12	NOBUBBLERISE	NOBUBBLERISE
+FL_USL	0.	0.	0.	0.
+FL_JLF	10.0	10.0
+FL_JLT	10.0	10.0	
+FL_SEG	1
+		1	.00202683	.1	0.0508
+!==========================================================
+FL_ID	'f_gas_out'	108	!ncg and steam outlet
+FL_FT	'v2' 'v_out'	12.4384	12.4384
+FL_GEO	.00810732	.1	.1
+FL_JSW	11	NOBUBBLERISE	NOBUBBLERISE
+FL_USL	0.	0.	0.	0.
+FL_JLF	12.4384	12.4384
+FL_JLT	12.4384	12.4384
+FL_SEG	1
+		1	.00810732	.1	.1016
+FL_VTM	1
+		1	'f_gas_out'	TF	'TF_REL'
+!==========================================================
+FL_ID	'f12'	201
+FL_FT	'v1'	'v2'	11.5284	11.5284
+FL_GEO	0.277368	1.2192	1.00
+FL_JSW	0	NOBUBBLERISE	NOBUBBLERISE
+FL_USL	0.	0.	0.	0.
+FL_JLF	11.5284	11.5284
+FL_JLT	11.5284	11.5284
+FL_SEG	1
+		1	.0277368	1.2192	0.0456648
+!==========================================================
+FL_ID	'f23'	301
+FL_FT	'v2'	'v3'	11.9834	11.9834
+FL_GEO	0.277368	0.7		1.00
+FL_JSW	3	NOBUBBLERISE	NOBUBBLERISE
+FL_USL	0.	0.	0.	0.
+FL_JLF	11.5284	12.4384
+FL_JLT	11.5284	12.4384
+FL_SEG	1
+		1	.0277368	0.7		0.0456648
+!==========================================================
+FL_ID	'f12'	401
+FL_FT	'v3'	'v1'	11.5284	11.5284
+FL_GEO	0.149352	1.2192	1.00
+FL_JSW	0	NOBUBBLERISE	NOBUBBLERISE
+FL_USL	0.	0.	0.	0.
+FL_JLF	11.5284	11.5284
+FL_JLT	11.5284	11.5284
+FL_SEG	1
+		1	.149352		1.2192	0.06979567
+!==========================================================
+
+TF_INPUT
+
+!==========================================================
+TF_ID	'TF_STM'	1.	0.0
+TF_TAB	2
+		1	0.0	3.094144
+		2	10.	3.094144
+!flow velocity calculated from assumed pipe diameter
+!and density of superheated steam at 25psi and 125C
+TF_ID	'TF_NCG'	.5	0.0
+TF_TAB	2
+		1	0.0	3.094144
+		2	10.	3.094144
+TF_ID	'TF_REL'	1.	0.00
+TF_TAB	4
+		1	0.0		0.0
+		2	1000.	0.0
+		3	2000.	.5
+		4	2500.	2.
+!==========================================================

@@ -1,0 +1,58 @@
+! practice melcor model
+! AP600 simulation
+! 06/10/2014
+
+!put in tank mass!!!
+
+!==========================================================
+MEG_DiagFile	'MELGEN.diag'
+MEL_DiagFile	'Dumps\MELCOR.diag'
+MEG_OutputFile	'Dumps\MELGEN-output.dump'
+MEL_OutputFile	'Dumps\MELCOR-output.dump'
+MEG_RestartFile	'Dumps\MELGEN.rst'
+MEL_RestartFile	'Dumps\MELCORControls.rst'	NCYCLE -1
+MessageFile		'Dumps\Messages.dump'
+StatusFile		'Dumps\MELCOR-status.dump'
+StopFile		'Dumps\MELCOR-stop.dump'
+WriteNewInp		'Dumps\NewInput.can'
+ExtDiagFile		'Dumps\MELCOR.diag.xtnd'
+PlotFile		'PTFs\Plot.ptf'
+!==========================================================
+! MELGEN INPUT
+Program MELGEN
+!==========================================================
+EXEC_INPUT
+	EXEC_TITLE	'AP600'
+!==========================================================	
+NCG_INPUT	!air
+	NCG_ID	N2
+	NCG_ID	O2
+	NCG_ID	He
+!==========================================================
+MP_INPUT
+	MP_ID	aluminum
+!==========================================================
+! file inclusions here
+! <<<<<<<<<<>>>>>>>>>>
+include volume.inp
+include fl.inp
+include	coolingpad.inp
+! <<<<<<<<<<>>>>>>>>>>
+!==========================================================
+End Program MELGEN Data
+!==========================================================
+! MELCOR INPUT
+Program MELCOR
+!==========================================================
+EXEC_INPUT
+	EXEC_CPULEFT	50.
+	EXEC_CPULIM		1.0E+10
+	EXEC_TEND		2.0E+4
+	EXEC_TIME		1
+					1	0.0	10.	1.0E-6	5.	1.0	50.0	1.0E+20
+	EXEC_TITLE		'AP600'
+	
+CVH_INPUT
+	CVH_TRACE 100
+!==========================================================	
+End Program MELCOR Data

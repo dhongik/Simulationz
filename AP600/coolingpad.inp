@@ -1,0 +1,42 @@
+AllowReplace
+
+HS_INPUT
+
+!==========================================================
+HS_ID	'cpad1'	500	!vertical pad on righthand side
+HS_GD	RECTANGULAR	NO
+HS_EOD	11.5284	1.0
+HS_SRC	NO
+HS_ND	2
+		1	1	0.0			295.0	aluminum
+		2	2	.3048	301.15		aluminum
+HS_LB	CalcCoefHS	'v2'	NO
+HS_LBP	EXT	0.05	0.95	!not sure
+HS_LBS	.277368	.91	.91
+HS_RB	TempCF	'TEMP_CF'	'v2'	NO
+HS_RBP	INT	0.05	0.95
+HS_FT	OFF
+!==========================================================
+HS_ID	'cpad2'	600	!horizontal pad on the top
+HS_GD	RECTANGULAR	NO
+HS_EOD	12.4384	0.0
+HS_SRC	NO
+HS_ND	2
+		1	1	0.0			295.0	aluminum
+		2	2	.3048	301.75		aluminum
+HS_LB	CalcCoefHS	'v2'	NO
+HS_LBP	EXT	0.05	0.95	!not sure
+HS_LBS	.277368	.91	.91
+HS_RB	TempCF	'TEMP_CF'	'v2'	NO
+HS_RBP	INT	0.05	0.95
+HS_FT	OFF
+!==========================================================
+
+CF_INPUT
+
+!==========================================================
+CF_ID	'TEMP_CF'	EQUALS
+CF_SAI	0.0	301.75
+CF_ARG	1
+		1	EXEC-TIME	0.0	0.0
+!==========================================================

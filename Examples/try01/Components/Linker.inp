@@ -1,0 +1,43 @@
+AllowReplace
+
+FL_INPUT
+
+FL_ID   'L1_2' 2001
+FL_FT   'Vol01'    'Vol02'   5.0E+00 5.0E+00
+FL_GEO  +8.213057E-03  +2.837406E-01  +1.00  +5.080000E-02 +5.080000E-02
+FL_USL  0.00  0.00  
+FL_VEL  0.00  0.00
+FL_JSW  3 NoBubbleRise  NoBubbleRise
+FL_SEG  1
+        1  +1.0E+00  +2.837406E-01  +1.01600E-01
+
+!
+FL_ID   'L2_3' 2002
+FL_FT   'Vol02'    'Vol03'  5.0E+00   5.0E+00
+FL_GEO  +8.213057E-03  +2.837406E-01  +1.00  +5.080000E-02 +5.080000E-02
+FL_USL  0.00  0.00  
+FL_VEL  0.00  0.00
+FL_JSW  3 NoBubbleRise  NoBubbleRise
+FL_SEG  1
+        1  +1.0E+00  +2.837406E-01  +1.01600E-01
+
+
+		
+FL_ID  'L3_4'  2003
+FL_FT  'Vol03'  'Vol04'      5.0E+00 5.0E+00
+FL_GEO  +8.213057E-03  +2.837406E-01  +1.00  +5.080000E-02 +5.080000E-02
+FL_USL  0.00  0.00  
+FL_VEL  0.00  0.00
+FL_JSW  3 NoBubbleRise  NoBubbleRise
+FL_SEG  1
+        1  +1.0E+00  +2.837406E-01  +1.01600E-01
+
+		
+FL_ID  'L4_1'  2004
+FL_FT  'Vol04'  'Vol01'      5.0E+00 5.0E+00
+FL_GEO  +8.213057E-03  +2.837406E-01  +1.00  +5.080000E-02 +5.080000E-02
+FL_USL  0.00  0.00  
+FL_VEL  0.00  0.00
+FL_JSW  3 NoBubbleRise  NoBubbleRise
+FL_SEG  1
+        1  +1.0E+00  +2.837406E-01  +1.01600E-01

@@ -1,0 +1,76 @@
+AllowReplace
+
+FL_INPUT
+!====================================
+FL_ID   'L1_2' 2001
+FL_FT   'Vol01'    'Vol02'   2.5E+00 2.5E+00
+FL_GEO  +7.854E-03  +5.0  +1.00
+FL_USL  0.00  0.00  
+FL_VEL  0.00  0.00
+FL_JSW  2 NoBubbleRise  NoBubbleRise
+FL_SEG  1
+        1  +7.854E-03  +0.1  +0.1
+
+!====================================
+FL_ID   'L2_3' 2002
+FL_FT   'Vol02'    'Vol03'  0.0E+00   0.0E+00
+FL_GEO  +7.854E-03  +0.1  +1.00
+FL_USL  0.00  0.00  
+FL_VEL  0.00  0.00
+FL_JSW  2 NoBubbleRise  NoBubbleRise
+FL_SEG  1
+        1  +7.854E-03  +0.1  +0.1
+!====================================
+FL_ID  'L3_4'  2003
+FL_FT  'Vol03'  'Vol04'      -0.05E+00 -0.05E+00
+FL_GEO  +7.854E-03  +5.0  +1.00
+FL_USL  0.00  0.00  
+FL_VEL  0.00  0.00
+FL_JSW  3 NoBubbleRise  NoBubbleRise
+FL_SEG  1
+        1  +7.854E-03  +0.1  +0.1
+!====================================	
+FL_ID  'L4_5'  2004
+FL_FT  'Vol04'  'Vol05'      0.0E+00   0.0E+00
+FL_GEO  +7.854E-03  +0.1  +1.00
+FL_USL  0.00  0.00  
+FL_VEL  0.00  0.00
+FL_JSW  2 NoBubbleRise  NoBubbleRise
+FL_SEG  1
+        1  +7.854E-03  +0.1  +0.1
+!====================================	
+FL_ID  'L5_6'  2005
+FL_FT  'Vol05'  'Vol06'      2.5E+00 2.5E+00
+FL_GEO  +7.854E-03  +5.0  +1.00
+FL_USL  0.00  0.00  
+FL_VEL  0.00  0.00
+FL_JSW  2 NoBubbleRise  NoBubbleRise
+FL_SEG  1
+        1  +7.854E-03  +0.1  +0.1
+!====================================	
+FL_ID  'L6_7'  2006
+FL_FT  'Vol06'  'Vol07'      5.0E+00 5.0E+00
+FL_GEO  +7.854E-03  +0.1  +1.00
+FL_USL  0.00  0.00  
+FL_VEL  0.00  0.00
+FL_JSW  2 NoBubbleRise  NoBubbleRise
+FL_SEG  1
+        1  +7.854E-03  +0.1  +0.1
+!====================================	
+FL_ID  'L7_8'  2007
+FL_FT  'Vol07'  'Vol08'      5.05E+00 5.05E+00
+FL_GEO  +7.854E-03  +5.0  +1.00
+FL_USL  0.00  0.00  
+FL_VEL  0.00  0.00
+FL_JSW  3 NoBubbleRise  NoBubbleRise
+FL_SEG  1
+        1  +7.854E-03  +0.1  +0.1
+!====================================	
+FL_ID  'L8_1'  2008
+FL_FT  'Vol08'  'Vol01'      5.0E+00 5.0E+00
+FL_GEO  +7.854E-03  +0.1  +1.00
+FL_USL  0.00  0.00  
+FL_VEL  0.00  0.00
+FL_JSW  2 NoBubbleRise  NoBubbleRise
+FL_SEG  1
+        1  +7.854E-03  +0.1  +0.1
